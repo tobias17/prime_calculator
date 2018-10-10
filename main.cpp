@@ -12,6 +12,19 @@
  */
 
 #include <cstdlib>
+#include <iostream>
+#include <fstream>
+#include <pthread.h>
+
+#include "SingleThreadPrimeCalculator.h"
+
+#define MULTI_THREAD    false
+#define FILE_OUT        true
+#define FILE_NAME       "out.txt"
+
+#define THREAD_COUNT        10
+#define AMOUNT_PER_THREAD   1000000
+#define STARTING_AMNT       1000000
 
 using namespace std;
 
@@ -19,7 +32,8 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-
-    return 0;
+    
+    cout << SingleThreadPrimeCalculator::calculateVectorized(100000000, FILE_OUT) << endl;
+    
 }
 
