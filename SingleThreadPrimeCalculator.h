@@ -16,8 +16,8 @@
 
 class SingleThreadPrimeCalculator {
 public:
-    static int calculateBruteForce(int iAmntToCalculate, bool bFileOut);
-    static int calculateVectorized(int iAmntToCalculate, bool bFileOut);
+    static int calculateBruteForce(int amntToCalculate, bool fileOut);
+    static int calculateVectorized(int amntToCalculate, bool fileOut);
 private:
 };
 

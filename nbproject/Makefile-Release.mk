@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/MultiThreadPrimeCalculator.o \
 	${OBJECTDIR}/SingleThreadPrimeCalculator.o \
 	${OBJECTDIR}/main.o
 
@@ -62,6 +63,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/prime_calculator: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/prime_calculator ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/MultiThreadPrimeCalculator.o: MultiThreadPrimeCalculator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MultiThreadPrimeCalculator.o MultiThreadPrimeCalculator.cpp
 
 ${OBJECTDIR}/SingleThreadPrimeCalculator.o: SingleThreadPrimeCalculator.cpp
 	${MKDIR} -p ${OBJECTDIR}

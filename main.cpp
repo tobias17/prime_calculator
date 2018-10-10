@@ -17,6 +17,7 @@
 #include <pthread.h>
 
 #include "SingleThreadPrimeCalculator.h"
+#include "MultiThreadPrimeCalculator.h"
 
 #define MULTI_THREAD    false
 #define FILE_OUT        true
@@ -33,7 +34,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     
-    cout << SingleThreadPrimeCalculator::calculateVectorized(100000000, FILE_OUT) << endl;
+    cout << MultiThreadPrimeCalculator::calculateVectorized(1000000, 100, FILE_OUT) << endl;
     
 }
 
