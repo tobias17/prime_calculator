@@ -14,6 +14,8 @@
 #ifndef MULTITHREADPRIMECALCULATOR_H
 #define MULTITHREADPRIMECALCULATOR_H
 
+#include <vector>
+
 class MultiThreadPrimeCalculator {
 public:
     static int calculateBruteForce(int amntPerThread, int threadCount, bool fileOut);

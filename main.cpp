@@ -34,7 +34,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     
-    cout << MultiThreadPrimeCalculator::calculateVectorized(1000000, 100, FILE_OUT) << endl;
+    cout << SingleThreadPrimeCalculator::calculateBruteForce(10000, FILE_OUT).size() << endl;
     
 }
 

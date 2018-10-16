@@ -16,7 +16,6 @@
 #include <iostream>
 #include <fstream>
 #include <math.h>
-#include <vector>
 #include <thread>
 
 using namespace std;

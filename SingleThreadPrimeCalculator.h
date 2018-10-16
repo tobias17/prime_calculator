@@ -14,10 +14,14 @@
 #ifndef SINGLE_THREAD_PRIME_CALCULATOR_H
 #define SINGLE_THREAD_PRIME_CALCULATOR_H
 
+#include <vector>
+
+using namespace std;
+
 class SingleThreadPrimeCalculator {
 public:
-    static int calculateBruteForce(int amntToCalculate, bool fileOut);
-    static int calculateVectorized(int amntToCalculate, bool fileOut);
+    static vector<int> calculateBruteForce(int amntToCalculate, bool fileOut);
+    static vector<int> calculateVectorized(int amntToCalculate, bool fileOut);
 private:
 };
 
